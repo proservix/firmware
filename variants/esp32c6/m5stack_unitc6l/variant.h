@@ -1,8 +1,9 @@
 void c6l_init();
 
-#define HAS_GPS 1
-#define GPS_RX_PIN 4
-#define GPS_TX_PIN 5
+// Desativado para libertar o pino G4 para leitura da bateria
+// #define HAS_GPS 1
+// #define GPS_RX_PIN 4
+// #define GPS_TX_PIN 5
 
 #define I2C_SDA 10
 #define I2C_SCL 8
@@ -56,3 +57,8 @@ void c6l_init();
 #define BRIGHTNESS_DEFAULT 130 // Medium Low Brightness
 
 #define SERIAL_PRINT_PORT 1
+
+// Analog reading of the 12V battery on pin G4 (100k/22k divider)
+#define BATTERY_PIN 4
+#define ADC_CHANNEL ADC1_CHANNEL_4
+#define ADC_MULTIPLIER 5.55
