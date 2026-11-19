@@ -1,3 +1,5 @@
+#pragma once
+
 void c6l_init();
 
 // Desativado para libertar o pino G4 para leitura da bateria
@@ -58,7 +60,7 @@ void c6l_init();
 
 #define SERIAL_PRINT_PORT 1
 
-// Analog reading of the 12V battery on pin G4 (100k/22k divider)
+// Leitura analógica da bateria de 12V no pino G4 (divisor 100k / 22k)
 #define BATTERY_PIN 4
-#define ADC_CHANNEL ADC1_CHANNEL_4
+#define ADC_CHANNEL ADC1_GPIO4_CHANNEL
 #define ADC_MULTIPLIER 5.55
